@@ -1,0 +1,1 @@
+export const URL_SERVEUR:string="https:/localhost:8080";

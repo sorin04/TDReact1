@@ -1,6 +1,7 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import { Typography, Box, TextField, Button } from "@mui/material";
 
+
 interface FormData {
     login: string;
     password: string;
@@ -8,6 +9,7 @@ interface FormData {
 
 export const Connexion = () => {
     const {register, handleSubmit, formState: { errors },} = useForm<FormData>();
+
 
     const onSubmit: SubmitHandler<FormData> = (data) => {
         console.log(data);
@@ -22,7 +24,7 @@ export const Connexion = () => {
                     backgroundColor: "background.paper",
                 }}
             >
-                <Typography variant="h4" align="center" gutterBottom>
+                <Typography variant="h4" gutterBottom align="center" >
                     Connexion
                 </Typography>
                 <form onSubmit={handleSubmit(onSubmit)}>
