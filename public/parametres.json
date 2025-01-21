@@ -1,0 +1,7 @@
+{
+  "URL_SERVEUR":"http://localhost:8080",
+  "URL_AUTH":"/login",
+  "SECRET_KEY":"",
+  "WS_SOCKE": ""
+
+}

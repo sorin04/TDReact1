@@ -1,16 +1,19 @@
 export const ValidationConnexion = {
-    login: {
-        required: "Le login est requis",
-        pattern: {
-            value: /^[a-zA-Z0-9_-]{3,20}$/,
-            message: "Le login doit contenir entre 3 et 20 caractères (lettres, chiffres, underscores ou tirets uniquement).",
-        },
-    },
     password: {
-        required: "Le mot de passe est requis",
-        minLength: {
-            value: /^[a-zA-Z0-9_-]{3,20}$/,
-            message: "Le mot de passe doit contenir au moins 8 caractères.",
+        required: "Login obligatoire",
+        pattern: {
+            value: /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+            message:
+                "Le password doit comporter au moins 8 caractères, inclure une lettre majuscule, un chiffre et un symbole.",
         },
     },
-};
+    login: {
+        required: "Login obligatoire",
+        pattern:
+            {
+                value: /^[a-zA-Z0-9._-]{3,20}$/,
+                message:
+                    "Le Login doit  contenir entre 3 et 20 caractères, ne peut inclure que des lettres, chiffres, points, tirets bas ou tirets.",
+            },
+    },
+}
